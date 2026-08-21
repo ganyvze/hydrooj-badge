@@ -12,18 +12,16 @@
 ## 安装
 
 ```bash
-# 在 HydroOJ 根目录下
-npm install hydrooj-badge
+cd /root/.hydro/addons
+git clone https://github.com/ganyvze/hydrooj-badge
+hydrooj addon add /root/.hydro/addons/hydrooj-badge
+pm2 restart hydrooj
 ```
 
-或在 `package.json` 中添加依赖：
+一键安装：
 
-```json
-{
-  "dependencies": {
-    "hydrooj-badge": "^0.0.1"
-  }
-}
+```bash
+cd /root/.hydro/addons && git clone https://github.com/ganyvze/hydrooj-badge && hydrooj addon add /root/.hydro/addons/hydrooj-badge && pm2 restart hydrooj
 ```
 
 ## 配置
@@ -79,29 +77,9 @@ plugins:
 - **前端展示**：使用 Nunjucks 模板渲染徽章样式
 - **颜色验证**：支持 3 位或 6 位 HEX 颜色码
 
-## 开发信息
-
-- **作者**：33DAI
-- **版本**：0.0.1
-- **许可证**：AGPL-3.0
-- **主文件**：index.ts
-
 ## 注意事项
 
 1. 如果用户已有徽章，创建新徽章会覆盖原有徽章
 2. 颜色码必须是有效的 HEX 格式（如 `#FFF` 或 `#FFFFFF`）
 3. 徽章文本会自动过滤单引号和双引号字符
 4. 删除徽章操作不可恢复，请谨慎操作
-
-## 截图
-
-（可选：添加插件界面截图）
-
-## 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-## 相关链接
-
-- [HydroOJ 官方文档](https://hydro.ac/docs)
-- [问题反馈](https://github.com/your-repo/hydrooj-badge/issues)
