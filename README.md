@@ -24,16 +24,6 @@ pm2 restart hydrooj
 cd /root/.hydro/addons && git clone https://github.com/ganyvze/hydrooj-badge && hydrooj addon add /root/.hydro/addons/hydrooj-badge && pm2 restart hydrooj
 ```
 
-## 配置
-
-在 HydroOJ 的配置文件中启用插件：
-
-```yaml
-plugins:
-  badge:
-    enabled: true
-```
-
 ## 使用说明
 
 ### 路由说明
